@@ -31,7 +31,7 @@ jobs:
         run: dotnet test PluginStepMover.Tests/PluginStepMover.Tests.csproj --configuration Release --no-build --verbosity normal
 
       - name: Pack
-        run: dotnet pack PluginStepMover/PluginStepMover.csproj --configuration Release --no-build --output ./artifacts
+        run: dotnet pack PluginStepMover/PluginStepMover.csproj --configuration Release --output ./artifacts
 
       - name: Push to NuGet
         run: dotnet nuget push ./artifacts/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }} --skip-duplicate

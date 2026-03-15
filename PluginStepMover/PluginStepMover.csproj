@@ -18,10 +18,12 @@
     <PackageTags>XrmToolBox;Dataverse;Dynamics365;Plugin;PluginStep</PackageTags>
     <PackageReleaseNotes>Initial release: move or copy plugin steps between plugin types, cross-environment support, auto-mapping, solution assignment.</PackageReleaseNotes>
     <PackageIcon>images\icon.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
     <None Include="icon.png" Pack="true" PackagePath="images\" />
+    <None Include="..\README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 
   <ItemGroup>
