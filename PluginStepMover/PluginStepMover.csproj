@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
@@ -7,24 +7,23 @@
     <Nullable>enable</Nullable>
     <LangVersion>latest</LangVersion>
     <Authors>NB24, Niels Tureluren</Authors>
-    <Version>1.$([System.DateTime]::Now.ToString("yyyy.M.d"))</Version>
-    <AssemblyVersion>1.$([System.DateTime]::Now.ToString("yyyy.M.d"))</AssemblyVersion>
-    <FileVersion>1.$([System.DateTime]::Now.ToString("yyyy.M.d"))</FileVersion>
+    <Version>1.$([System.DateTime]::Now.ToString("yyyy.M")).1</Version>
+    <AssemblyVersion>1.$([System.DateTime]::Now.ToString("yyyy.M")).1</AssemblyVersion>
+    <FileVersion>1.$([System.DateTime]::Now.ToString("yyyy.M")).1</FileVersion>
     <Description>XrmToolBox plugin to move or copy plugin steps between plugin types in Microsoft Dataverse.</Description>
     <PackageProjectUrl>https://github.com/Gdynam/PluginStepMover</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Gdynam/PluginStepMover</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageTags>XrmToolBox;Dataverse;Dynamics365;Plugin;PluginStep</PackageTags>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <NoWarn>$(NoWarn);NU5100;NU5128</NoWarn>
     <PackageReleaseNotes>Initial release: move or copy plugin steps between plugin types, cross-environment support, auto-mapping, solution assignment.</PackageReleaseNotes>
     <PackageIcon>images\icon.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <NuspecFile>PluginStepMover.nuspec</NuspecFile>
+    <NuspecProperties>version=$(Version);configuration=$(Configuration);tfm=$(TargetFramework)</NuspecProperties>
   </PropertyGroup>
-
-  <ItemGroup>
-    <None Include="icon.png" Pack="true" PackagePath="images\" />
-    <None Include="..\README.md" Pack="true" PackagePath="\" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="MsCrmTools.Xrm.Connection" Version="1.2025.9.64" />

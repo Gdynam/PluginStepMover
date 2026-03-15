@@ -9,13 +9,17 @@
     <releaseNotes>Initial release: move or copy plugin steps between plugin types, cross-environment support, auto-mapping, solution assignment.</releaseNotes>
     <projectUrl>https://github.com/Gdynam/PluginStepMover</projectUrl>
     <license type="expression">MIT</license>
-    <iconUrl>https://raw.githubusercontent.com/Gdynam/PluginStepMover/main/PluginStepMover/icon.png</iconUrl>
+    <icon>images\icon.png</icon>
+    <readme>README.md</readme>
     <tags>XrmToolBox Dataverse Dynamics365 Plugin PluginStep</tags>
+    <repository type="git" url="https://github.com/Gdynam/PluginStepMover" />
     <dependencies>
       <dependency id="XrmToolBox" version="1.2025.10.74" />
     </dependencies>
   </metadata>
   <files>
-    <file src="bin\Release\net48\PluginStepMover.dll" target="Plugins" />
+    <file src="bin\$configuration$\$tfm$\PluginStepMover.dll" target="Plugins\" />
+    <file src="icon.png" target="images\" />
+    <file src="..\README.md" target="" />
   </files>
 </package>
