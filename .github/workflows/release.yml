@@ -1,0 +1,42 @@
+name: Release to NuGet
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build-test-publish:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.x'
+
+      - name: Restore
+        run: |
+          dotnet restore PluginStepMover/PluginStepMover.csproj
+          dotnet restore PluginStepMover.Tests/PluginStepMover.Tests.csproj
+
+      - name: Build
+        run: |
+          dotnet build PluginStepMover/PluginStepMover.csproj --configuration Release --no-restore
+          dotnet build PluginStepMover.Tests/PluginStepMover.Tests.csproj --configuration Release --no-restore
+
+      - name: Test
+        run: dotnet test PluginStepMover.Tests/PluginStepMover.Tests.csproj --configuration Release --no-build --verbosity normal
+
+      - name: Pack
+        run: dotnet pack PluginStepMover/PluginStepMover.csproj --configuration Release --no-build --output ./artifacts
+
+      - name: Push to NuGet
+        run: dotnet nuget push ./artifacts/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }} --skip-duplicate
+
+      - name: Upload NuGet package as release asset
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ./artifacts/*.nupkg
