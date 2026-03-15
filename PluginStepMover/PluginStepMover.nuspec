@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>PluginStepMover</id>
+    <version>$version$</version>
+    <title>Plugin Step Mover</title>
+    <authors>NB24, Niels Tureluren</authors>
+    <description>XrmToolBox plugin to move or copy plugin steps between plugin types in Microsoft Dataverse. Supports cross-environment operations, auto-mapping, and solution assignment.</description>
+    <releaseNotes>Initial release: move or copy plugin steps between plugin types, cross-environment support, auto-mapping, solution assignment.</releaseNotes>
+    <projectUrl>https://github.com/Gdynam/PluginStepMover</projectUrl>
+    <license type="expression">MIT</license>
+    <tags>XrmToolBox Dataverse Dynamics365 Plugin PluginStep</tags>
+    <dependencies>
+      <dependency id="XrmToolBox" version="1.2025.10.74" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\net48\PluginStepMover.dll" target="Plugins" />
+  </files>
+</package>

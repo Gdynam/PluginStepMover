@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <Authors>NB24, Niels Tureluren</Authors>
+    <Version>1.$([System.DateTime]::Now.ToString("yyyy.M.d"))</Version>
+    <AssemblyVersion>1.$([System.DateTime]::Now.ToString("yyyy.M.d"))</AssemblyVersion>
+    <FileVersion>1.$([System.DateTime]::Now.ToString("yyyy.M.d"))</FileVersion>
+    <Description>XrmToolBox plugin to move or copy plugin steps between plugin types in Microsoft Dataverse.</Description>
+    <PackageProjectUrl>https://github.com/Gdynam/PluginStepMover</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Gdynam/PluginStepMover</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>XrmToolBox;Dataverse;Dynamics365;Plugin;PluginStep</PackageTags>
+    <PackageReleaseNotes>Initial release: move or copy plugin steps between plugin types, cross-environment support, auto-mapping, solution assignment.</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MsCrmTools.Xrm.Connection" Version="1.2025.9.64" />
+    <PackageReference Include="XrmToolBoxPackage" Version="1.2025.10.74" />
+  </ItemGroup>
+
+</Project>

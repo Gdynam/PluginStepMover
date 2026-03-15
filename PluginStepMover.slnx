@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="PluginStepMover/PluginStepMover.csproj" />
+  <Project Path="PluginStepMover.Tests/PluginStepMover.Tests.csproj" />
+</Solution>

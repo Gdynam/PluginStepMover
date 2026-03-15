@@ -1,8 +1,13 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
+## Build output
+**/bin/
+**/obj/
+artifacts/
 
-/.claude
-/.vs
-/.vscode
-/.localstuff
+## IDE / local
+.vs/
+.vscode/
+.claude/
+.localstuff/
+*.user
+*.suo
+NuGet.Config
