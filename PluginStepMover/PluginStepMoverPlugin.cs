@@ -13,9 +13,13 @@ namespace PluginStepMover;
 [ExportMetadata("BackgroundColor", "White")]
 [ExportMetadata("PrimaryFontColor", "Black")]
 [ExportMetadata("SecondaryFontColor", "DimGray")]
-public class PluginStepMoverPlugin : PluginBase
+public class PluginStepMoverPlugin : PluginBase, IGitHubPlugin, IHelpPlugin
 {
     private static readonly Guid PluginId = new("8d487e02-acdb-4469-b177-9ca5688d38b3");
+
+    public string RepositoryName => "PluginStepMover";
+    public string UserName => "Gdynam";
+    public string HelpUrl => "https://github.com/Gdynam/PluginStepMover#readme";
 
     public override IXrmToolBoxPluginControl GetControl()
     {

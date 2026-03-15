@@ -17,7 +17,12 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageTags>XrmToolBox;Dataverse;Dynamics365;Plugin;PluginStep</PackageTags>
     <PackageReleaseNotes>Initial release: move or copy plugin steps between plugin types, cross-environment support, auto-mapping, solution assignment.</PackageReleaseNotes>
+    <PackageIcon>images\icon.png</PackageIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="icon.png" Pack="true" PackagePath="images\" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="MsCrmTools.Xrm.Connection" Version="1.2025.9.64" />

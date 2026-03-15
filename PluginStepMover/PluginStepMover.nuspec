@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>PluginStepMover</id>
     <version>$version$</version>
@@ -9,6 +9,7 @@
     <releaseNotes>Initial release: move or copy plugin steps between plugin types, cross-environment support, auto-mapping, solution assignment.</releaseNotes>
     <projectUrl>https://github.com/Gdynam/PluginStepMover</projectUrl>
     <license type="expression">MIT</license>
+    <iconUrl>https://raw.githubusercontent.com/Gdynam/PluginStepMover/main/PluginStepMover/icon.png</iconUrl>
     <tags>XrmToolBox Dataverse Dynamics365 Plugin PluginStep</tags>
     <dependencies>
       <dependency id="XrmToolBox" version="1.2025.10.74" />
